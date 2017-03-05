@@ -1,0 +1,44 @@
+# This is the transformation catalog. It lists information about each of the
+# executables that are used by the workflow.
+#
+# Here is an example:
+#
+#tr myexe {
+#    site compute {
+#        pfn "/usr/bin/myexe"
+#        arch "x86_64"
+#        os "LINUX"
+#        type "INSTALLED"
+#    }
+#}
+#
+
+# These are the executables that the workflow uses. All the executables
+# are stored on the local machine in this example. 
+tr e.setup {
+	site local {
+	  pfn "/media/sf_Pegasus/Pegasus/R-EPA/setupvar.R"
+	  arch "x86_64"
+	  os "LINUX"
+	  type "INSTALLED"
+	}
+}
+
+tr e.WA {
+        site local {
+          pfn "/media/sf_Pegasus/Pegasus/R-EPA/weighted.average.R"
+          arch "x86_64"
+          os "LINUX"
+          type "INSTALLED"
+        }
+}
+
+tr e.cp {
+        site local {
+          pfn "/media/sf_Pegasus/Pegasus/R-EPA/cumulative.percentiles.R"
+          arch "x86_64"
+          os "LINUX"
+          type "INSTALLED"
+        }
+}
+
